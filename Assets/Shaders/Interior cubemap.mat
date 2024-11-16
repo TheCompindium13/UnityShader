@@ -1,0 +1,108 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!21 &2100000
+Material:
+  serializedVersion: 8
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Interior cubemap
+  m_Shader: {fileID: -6465566751694194690, guid: 42c88c9635495a34bb318b39821e2d4f,
+    type: 3}
+  m_Parent: {fileID: 0}
+  m_ModifiedSerializedProperties: 0
+  m_ValidKeywords: []
+  m_InvalidKeywords: []
+  m_LightmapFlags: 1
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 1
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_LockedProperties: 
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - Cubemap_1:
+        m_Texture: {fileID: 8900000, guid: 47c09c2d6e7cea7418a121a3b6e87cc5, type: 2}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - Cubemap_461F9CE4:
+        m_Texture: {fileID: 8900000, guid: 7ea0b5617cd36094ba12a9c67b85e4f9, type: 2}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - Texture2D_3D40F5AB:
+        m_Texture: {fileID: 2800000, guid: f805e88d3eaf0f046ac4ed03de5c7c3e, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - Texture2D_99F24CDB:
+        m_Texture: {fileID: 2800000, guid: 83e33f86d2b973048944e462cb3dc0b9, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _FoamMask:
+        m_Texture: {fileID: 2800000, guid: 2922157cb1ed44945813fd528dd0ac36, type: 3}
+        m_Scale: {x: -15.42, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _FoamTex:
+        m_Texture: {fileID: 2800000, guid: ef65c313b280a3245b7badb32cdc1c56, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _InteriorSubGraph_58abf05030244b17ad711180299e87e4_CubemapInterior2_382976246_Cubemap:
+        m_Texture: {fileID: 8900000, guid: 47c09c2d6e7cea7418a121a3b6e87cc5, type: 2}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _InteriorSubGraph_d40d23373bc940a5805ab04ec0679943_CubemapInterior2_382976246_Cubemap:
+        m_Texture: {fileID: 8900000, guid: 47c09c2d6e7cea7418a121a3b6e87cc5, type: 2}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _WaterTex:
+        m_Texture: {fileID: 2800000, guid: aa701e5be2dbcd24aad4fb9c3ca284da, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_Lightmaps:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_LightmapsInd:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_ShadowMasks:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Ints: []
+    m_Floats:
+    - Vector1_383CCB6E: 2
+    - Vector1_B8F2B358: 1
+    - _FoamMovementSpeed: 1
+    - _FoamNoiseScale: 0
+    - _FoamNoiseSpeed: 0
+    - _FoamTransparency: 1
+    - _QueueControl: 0
+    - _QueueOffset: 0
+    - _RefractionDepth: 1
+    - _WaterTransparency: 1
+    - _WaveFrequency: 116.5
+    - _WaveHeight: 0.01
+    - _WaveSourceCount: 0
+    - _WaveSpeed: 3.55
+    - _WaveSpread: 93.85
+    m_Colors:
+    - _Tiling: {r: 1, g: 1, b: 1e+32, a: 1.1111111e+12}
+    - _WaveSources: {r: 3.83, g: 0, b: 0, a: 0}
+  m_BuildTextureStacks: []
+--- !u!114 &1879025308554643939
+MonoBehaviour:
+  m_ObjectHideFlags: 11
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0353a89b1f911e48b9e16bdc9f2e058, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  version: 7
