@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Custom_GaussianWaveShader
+  m_Name: Custom_RealisticOceanGerstner
   m_Shader: {fileID: 4800000, guid: 0a33207bcc956a241a832ae1e2f9a5eb, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
@@ -25,7 +25,7 @@ Material:
     m_TexEnvs:
     - _FoamTex:
         m_Texture: {fileID: 2800000, guid: ef65c313b280a3245b7badb32cdc1c56, type: 3}
-        m_Scale: {x: 0, y: 0}
+        m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _WaterTex:
         m_Texture: {fileID: 2800000, guid: aa701e5be2dbcd24aad4fb9c3ca284da, type: 3}
@@ -41,13 +41,13 @@ Material:
     - _RefractionDepth: 1
     - _Time: 0
     - _WaterTransparency: 0.5
-    - _WaveFrequency: 10
-    - _WaveHeight: 0.38
+    - _WaveFrequency: 0
+    - _WaveHeight: 0.17
     - _WaveSourceCount: 7
-    - _WaveSpeed: 8.66
+    - _WaveSpeed: 0
     - _WaveSpread: 1
     m_Colors:
     - _OceanColor: {r: 0, g: 0, b: 1, a: 1}
-    - _SkyColor: {r: 0.7, g: 0.7, b: 0.7, a: 1}
-    - _Tiling: {r: 100, g: 100, b: 100, a: 1}
+    - _SkyColor: {r: 0.34901962, g: 0.3254902, b: 0.3019608, a: 1}
+    - _Tiling: {r: 0, g: 0, b: 0, a: 0}
   m_BuildTextureStacks: []

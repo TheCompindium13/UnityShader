@@ -4,7 +4,7 @@ Shader "Custom/RealisticOceanGerstner"
     {
         _WaveHeight ("Wave Height", Range(0, 10)) = 1.0
         _WaveSpeed ("Wave Speed", Range(0, 10)) = 1.0
-        _WaveFrequency ("Wave Frequency", Range(0, 10)) = 1.0
+        _WaveFrequency ("Wave Frequency", Range(0, 100)) = 1.0
         _Tiling ("Tiling", Vector) = (1, 1, 0, 0)
         _FoamTex ("Foam Texture", 2D) = "white" {}
         _OceanColor ("Ocean Color", Color) = (0, 0, 1, 1)
@@ -38,6 +38,9 @@ Shader "Custom/RealisticOceanGerstner"
             float3 _WaveDir1;
             float3 _WaveDir2;
             float3 _WaveDir3;
+            float3 _WaveDir4;
+            float3 _WaveDir5;
+            float3 _WaveDir6;
 
             // Gerstner Wave Formula
             float gerstnerWave(float3 position, float time, float amplitude, float3 direction, float frequency)
@@ -83,6 +86,9 @@ Shader "Custom/RealisticOceanGerstner"
                 height += gerstnerWave(worldPos, _Time.y, _WaveHeight, _WaveDir1, _WaveFrequency);
                 height += gerstnerWave(worldPos, _Time.y, _WaveHeight, _WaveDir2, _WaveFrequency * 1.5);
                 height += gerstnerWave(worldPos, _Time.y, _WaveHeight, _WaveDir3, _WaveFrequency * 2.0);
+                height += gerstnerWave(worldPos, _Time.y, _WaveHeight, _WaveDir4, _WaveFrequency * 2.5);
+                height += gerstnerWave(worldPos, _Time.y, _WaveHeight, _WaveDir5, _WaveFrequency * 3.0);
+                height += gerstnerWave(worldPos, _Time.y, _WaveHeight, _WaveDir6, _WaveFrequency * 3.5);
                 v.vertex.y += height;
 
                 // Apply horizontal displacement for wave sharpening (using _Lambda for control)
@@ -90,6 +96,9 @@ Shader "Custom/RealisticOceanGerstner"
                 displacement += horizontalDisplacement(worldPos, _Time.y, _WaveHeight, _WaveDir1, _WaveFrequency);
                 displacement += horizontalDisplacement(worldPos, _Time.y, _WaveHeight, _WaveDir2, _WaveFrequency * 1.5);
                 displacement += horizontalDisplacement(worldPos, _Time.y, _WaveHeight, _WaveDir3, _WaveFrequency * 2.0);
+                displacement += horizontalDisplacement(worldPos, _Time.y, _WaveHeight, _WaveDir4, _WaveFrequency * 2.5);
+                displacement += horizontalDisplacement(worldPos, _Time.y, _WaveHeight, _WaveDir5, _WaveFrequency * 3.0);
+                displacement += horizontalDisplacement(worldPos, _Time.y, _WaveHeight, _WaveDir6, _WaveFrequency * 3.5);
                 v.vertex.xyz += _Lambda * displacement;
 
                 o.pos = UnityObjectToClipPos(v.vertex);
@@ -108,6 +117,9 @@ Shader "Custom/RealisticOceanGerstner"
                 height += gerstnerWave(worldPos, _Time.y, _WaveHeight, _WaveDir1, _WaveFrequency);
                 height += gerstnerWave(worldPos, _Time.y, _WaveHeight, _WaveDir2, _WaveFrequency * 1.5);
                 height += gerstnerWave(worldPos, _Time.y, _WaveHeight, _WaveDir3, _WaveFrequency * 2.0);
+                height += gerstnerWave(worldPos, _Time.y, _WaveHeight, _WaveDir4, _WaveFrequency * 2.5);
+                height += gerstnerWave(worldPos, _Time.y, _WaveHeight, _WaveDir5, _WaveFrequency * 3.0);
+                height += gerstnerWave(worldPos, _Time.y, _WaveHeight, _WaveDir6, _WaveFrequency * 3.5);
 
                 // Foam: Generate foam based on height field using a simple threshold
                 fixed4 foamColor = tex2D(_FoamTex, i.uv) * (height > 0.5 ? 1.0 : 0.0);
